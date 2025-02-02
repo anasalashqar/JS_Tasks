@@ -17,22 +17,24 @@ document.getElementById("form1").addEventListener("submit", (event) => {
   const password = document.getElementById("password").value;
   const passwordConfirm = document.getElementById("confirmPassword").value;
   const emailConfirm = document.getElementById("confirmEmail").value;
+  const name = document.getElementById("name").value;
 
   if (email !== emailConfirm) {
     document.getElementById("answer").style.color = "red";
     document.getElementById("answer").innerHTML =
-      "Youre email doesnt match the confirmed one try again";
+      "You're email doesnt match the confirmed one try again";
   }
   if (password !== passwordConfirm) {
     document.getElementById("answer").style.color = "red";
     document.getElementById("answer").innerHTML =
-      "Youre password doesnt match the confirmed one try again";
+      "You're password doesnt match the confirmed one try again";
   }
   if (
     email &&
     password &&
     emailConfirm &&
     passwordConfirm &&
+    name &&
     password === passwordConfirm &&
     email === emailConfirm
   ) {
@@ -54,7 +56,8 @@ form.addEventListener("input", () => {
   const password = document.getElementById("password").value;
   const passwordConfirm = document.getElementById("confirmPassword").value;
   const emailConfirm = document.getElementById("confirmEmail").value;
-  if (email && password && emailConfirm && passwordConfirm) {
+  const name = document.getElementById("name").value;
+  if (email && password && emailConfirm && passwordConfirm && name) {
     document.getElementById("submit").disabled = false;
   }
 });
@@ -68,18 +71,18 @@ document.getElementById("form2").addEventListener("submit", (event) => {
 
   if (r == null) {
     document.getElementById("answer2").style.color = "red";
-    document.getElementById("answer2").innerHTML = "You dont have an account!";
+    document.getElementById("answer2").innerHTML = "You don't have an account!";
   }
   if (email2 !== r.email) {
     document.getElementById("answer2").style.color = "red";
     document.getElementById("answer2").innerHTML =
-      "Youre email doesnt match the confirmed one try again";
+      "You're email doesnt match the confirmed one try again";
   }
 
   if (password2 != r.password) {
     document.getElementById("answer2").style.color = "red";
     document.getElementById("answer2").innerHTML =
-      "Youre pass doesnt match the confirmed one try again";
+      "You're pass doesnt match the confirmed one try again";
   }
   if (email2 && password2 && password2 === r.password && email2 === r.email) {
     document.getElementById("answer2").style.color = "green";
