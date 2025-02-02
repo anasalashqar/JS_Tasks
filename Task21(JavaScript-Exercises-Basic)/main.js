@@ -102,6 +102,15 @@ document.getElementById("form2").addEventListener("submit", (event) => {
   }
 });
 
+document.getElementById("form2").addEventListener("input", () => {
+  document.getElementById("submit2").disabled = true;
+  const email = document.getElementById("email2").value;
+  const password = document.getElementById("password2").value;
+  if (email && password) {
+    document.getElementById("submit2").disabled = false;
+  }
+});
+
 document.getElementById("btn1").addEventListener("click", () => {
   document.getElementById("form1").reset();
   appending(2);
@@ -109,6 +118,7 @@ document.getElementById("btn1").addEventListener("click", () => {
 });
 document.getElementById("btn2").addEventListener("click", () => {
   document.getElementById("answer2").innerHTML = "";
+  document.getElementById("submit2").disabled = true;
   document.getElementById("form2").reset();
   appending(1);
   localStorage.setItem("append", "1");
