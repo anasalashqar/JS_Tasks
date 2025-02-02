@@ -19,6 +19,15 @@ document.getElementById("form1").addEventListener("submit", (event) => {
   const emailConfirm = document.getElementById("confirmEmail").value;
   const name = document.getElementById("name").value;
 
+  if (password.length < 8) {
+    document.getElementById("answer").style.color = "red";
+    document.getElementById("answer").innerHTML =
+      "You're password is too short should be more than 8 letters";
+  }
+  if (name.trim().length == 0) {
+    document.getElementById("answer").style.color = "red";
+    document.getElementById("answer").innerHTML = "You're name is too short";
+  }
   if (email !== emailConfirm) {
     document.getElementById("answer").style.color = "red";
     document.getElementById("answer").innerHTML =
@@ -31,17 +40,18 @@ document.getElementById("form1").addEventListener("submit", (event) => {
   }
   if (
     email &&
-    password &&
     emailConfirm &&
     passwordConfirm &&
-    name &&
+    name.trim() &&
     password === passwordConfirm &&
-    email === emailConfirm
+    email === emailConfirm &&
+    password.length > 8
   ) {
     localStorage.setItem(
       "answer",
       JSON.stringify({ email: email, password: password })
     );
+    document.getElementById("answer").innerHTML = "";
     appending(2);
     localStorage.setItem("append", "2");
     form.reset();
@@ -93,10 +103,13 @@ document.getElementById("form2").addEventListener("submit", (event) => {
 });
 
 document.getElementById("btn1").addEventListener("click", () => {
+  document.getElementById("form1").reset();
   appending(2);
   localStorage.setItem("append", "2");
 });
 document.getElementById("btn2").addEventListener("click", () => {
+  document.getElementById("answer2").innerHTML = "";
+  document.getElementById("form2").reset();
   appending(1);
   localStorage.setItem("append", "1");
 });
