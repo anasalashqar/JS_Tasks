@@ -113,6 +113,7 @@ document.getElementById("form2").addEventListener("input", () => {
 
 document.getElementById("btn1").addEventListener("click", () => {
   document.getElementById("form1").reset();
+  document.getElementById("submit").disabled = true;
   appending(2);
   localStorage.setItem("append", "2");
 });
