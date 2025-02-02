@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods</title>
+</head>
+<body>
+    <h1>JavaScript Array Methods</h1>
+    
+    <!-- Reverse Method Example -->
+    <h2>A. Reverse Method</h2>
+    <p>Input: ["apple", "banana", "cherry"]</p>
+    <button onclick="reverseArray()">Reverse Array</button>
+    <p>Output: <span id="reverseOutput"></span></p>
+
+    <!-- Concat Method Example -->
+    <h2>B. Concat Method</h2>
+    <p>Input: [1, 2, 3], [4, 5, 6]</p>
+    <button onclick="concatArrays()">Concat Arrays</button>
+    <p>Output: <span id="concatOutput"></span></p>
+
+    <!-- Slice Method Example -->
+    <h2>C. Slice Method</h2>
+    <p>Input: [1, 2, 3, 4, 5, 6], from index 2 to 4</p>
+    <button onclick="sliceArray()">Slice Array</button>
+    <p>Output: <span id="sliceOutput"></span></p>
+
+    <!-- Splice Method Example -->
+    <h2>D. Splice Method</h2>
+    <p>Input: [1, 2, 3, 4, 5], remove 1 element from index 3</p>
+    <button onclick="spliceArray()">Splice Array</button>
+    <p>Output: <span id="spliceOutput"></span></p>
+
+    <!-- IndexOf Method Example -->
+    <h2>E. IndexOf Method</h2>
+    <p>Input: [1, 2, 3, 4, 5], element 3</p>
+    <button onclick="findIndexOfElement()">Find Index</button>
+    <p>Output: <span id="indexOfOutput"></span></p>
+
+    <!-- Join Method Example -->
+    <h2>F. Join Method</h2>
+    <p>Input: [1, 2, 3, 4, 5]</p>
+    <button onclick="joinArray()">Join Array</button>
+    <p>Output: <span id="joinOutput"></span></p>
+
+    <!-- Split Method Example -->
+    <h2>G. Split Method</h2>
+    <p>Input: "1,2,3,4,5"</p>
+    <button onclick="splitString()">Split String</button>
+    <p>Output: <span id="splitOutput"></span></p>
+
+    <script>
+        function reverseArray() {
+            const fruits = ["apple", "banana", "cherry"];
+            const reversedFruits = fruits.reverse();
+            document.getElementById('reverseOutput').innerText = reversedFruits;
+        }
+
+        function concatArrays() {
+            const array1 = [1, 2, 3];
+            const array2 = [4, 5, 6];
+            const combinedArray = array1.concat(array2);
+            document.getElementById('concatOutput').innerText = combinedArray;
+        }
+
+        function sliceArray() {
+            const numbers = [1, 2, 3, 4, 5, 6];
+            const extractedNumbers = numbers.slice(3,4);
+            document.getElementById('sliceOutput').innerText = numbers;
+        }
+
+        function spliceArray() {
+            const numbers = [1, 2, 3, 4, 5];
+            // Remove 1 element from index 3
+            const removedElements = numbers.splice(1, 1);
+            document.getElementById('spliceOutput').innerText = `Array: ${numbers}, Removed: ${removedElements}`;
+        }
+
+        function findIndexOfElement() {
+            const numbers = [1, 2, 3, 4, 5];
+            const index = numbers.indexOf(3);
+            document.getElementById('indexOfOutput').innerText = index;
+        }
+
+        function joinArray() {
+            const numbers = [1, 2, 3, 4, 5];
+            const joinedString = numbers.join(',');
+            document.getElementById('joinOutput').innerText = joinedString;
+        }
+
+        function splitString() {
+            const string = "1,2,3,4,5";
+            const splitArray = string.split(',');
+            document.getElementById('splitOutput').innerText = `[${splitArray}]`;
+        }
+    </script>
+</body>
+</html>

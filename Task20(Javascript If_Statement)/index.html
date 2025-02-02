@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 20</h1>
+    <h2>JavaScript If Statment</h2>
+    <h2>Be aware as in the homework from Q6 to Q8 are not there!</h2>
+    <h3>Please check the console Ctrl+Shift+I</h3>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+      "
+    ></div>
+    <script type="text/javascript">
+      function checkAge(age) {
+        if (age > 18) {
+          return "You are an adult";
+        }
+      }
+      console.log("Question 1:-\n");
+      console.log('checkAge(27):- "' + checkAge(27) + '"');
+
+      function checkEven(num) {
+        if (num % 2 === 0) {
+          return "The number is even";
+        }
+      }
+      console.log("Question 2:-\n");
+      console.log('checkEven(4):- "' + checkEven(4) + '"');
+
+      // 3. Check if char is a letter
+      function checkLetter(char) {
+        if (
+          typeof char === "string" &&
+          char.length === 1 &&
+          /[a-zA-Z]/.test(char)
+        ) {
+          return "It's a letter";
+        }
+      }
+      console.log("Question 3:-\n");
+      console.log('checkLetter("a"):- "' + checkLetter("a") + '"');
+
+      function checkArray(list) {
+        if (Array.isArray(list)) {
+          return "It's an array";
+        }
+      }
+      console.log("Question 4:-\n");
+      console.log("checkArray([1, 2, 3]):- " + checkArray([1, 2, 3]));
+
+      function checkPositive(x) {
+        if (typeof x === "number" && x > 0) {
+          return x + " is a positive number";
+        }
+      }
+      console.log("Question 5:-\n");
+      console.log("checkPositive(5):- " + checkPositive(5));
+
+      function checkMultipleOf3(z) {
+        if (z % 3 === 0) {
+          return z + " is a multiple of 3";
+        }
+      }
+      console.log("Question 9:-\n");
+      console.log("checkMultipleOf3(9):- " + checkMultipleOf3(9));
+
+      function checkPassword(password) {
+        if (password.length >= 8) {
+          return "Your password is strong";
+        }
+      }
+      console.log("Question 10:-\n");
+      console.log(
+        'checkPassword("mypassword123"):- "' +
+          checkPassword("mypassword123") +
+          '"'
+      );
+
+      function checkWorkingAge(age) {
+        if (age >= 18 && age <= 65) {
+          return "You are of working age";
+        }
+      }
+      console.log("Question 11:-\n");
+      console.log("checkWorkingAge(30):- " + checkWorkingAge(30));
+
+      function checkPrimaryColor(color) {
+        if (color === "red" || color === "green" || color === "blue") {
+          return color + " is a primary color";
+        }
+      }
+      console.log("Question 12:-\n");
+      console.log(
+        'checkPrimaryColor("red"):- "' + checkPrimaryColor("red") + '"'
+      );
+
+      function isValidNumber(value) {
+        if (!isNaN(value) && value.trim() !== "") {
+          return value + " is a valid number";
+        } else {
+          return value + " is not a number";
+        }
+      }
+      console.log("Question 13:-\n");
+      console.log('isValidNumber("11"):- "' + isValidNumber("11") + '"');
+      console.log('isValidNumber("19"):- "' + isValidNumber("19") + '"');
+      console.log('isValidNumber("xyz"):- "' + isValidNumber("xyz") + '"');
+      console.log('isValidNumber("17.5"):- "' + isValidNumber("17.5") + '"');
+      console.log('isValidNumber("21F"):- "' + isValidNumber("21F") + '"');
+    </script>
+  </body>
+</html>

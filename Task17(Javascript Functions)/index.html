@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 16</h1>
+    <h2>JavaScript Functions</h2>
+    <h3>Please check the console Ctrl+Shift+I</h3>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+      "
+    ></div>
+    <script type="text/javascript">
+      console.log("Question1:-\n");
+      console.log(
+        "findSmallest([30,45,60,7]):- " + findSmallest([30, 45, 60, 7])
+      );
+      console.log("Question2:-\n");
+      console.log("AlphabeticalOrder('hello'):- " + AlphabeticalOrder("hello"));
+
+      console.log("Question3:-\n");
+      console.log("factorial(8):- " + factorial(8));
+
+      console.log("Question4:-\n");
+      console.log("oddOrEven(9):- " + oddOrEven(9));
+
+      console.log("Question5:-\n");
+      console.log("addUp(8):- " + addUp(8));
+
+      console.log("Question6:-\n");
+      console.log(
+        "minMaxLengthAverage():- " + minMaxLengthAverage([7, 13, 3, 77, 100])
+      );
+
+      console.log("Question7:-\n");
+      console.log(
+        "countWords('hello from codingAcad'):- " +
+          countWords("hello from codingAcad")
+      );
+      console.log("Question8:-\n");
+      console.log("MultiplyByLength([4,2,5]):- " + MultiplyByLength([4, 2, 5]));
+
+      console.log("Question9:-\n");
+      console.log(
+        "checkEnding('CodingSchool','Ac'):- " + checkEnding("CodingSchool", "Ac")
+      );
+      console.log("Question10:-\n");
+      console.log("doubleChar('Coding'):- " + doubleChar("Coding"));
+      console.log("Question11:-\n");
+      console.log(
+        "findIndex(['Ali', 'Mazen', 'Ayham', 'Murad'], 'Ali'):- " +
+          findIndex(["Ali", "Mazen", "Ayham", "Murad"], "Ali")
+      );
+
+      function findSmallest(arr) {
+        if (arr.length === 0) return "Array is empty";
+        return Math.min(...arr);
+      }
+      function AlphabeticalOrder(str) {
+        return str.split("").sort().join("");
+      }
+      function factorial(n) {
+        if (n === 0 || n === 1) return 1;
+        return n * factorial(n - 1);
+      }
+      function oddOrEven(n) {
+        return n % 2 === 0 ? "Even" : "Odd";
+      }
+      function addUp(n) {
+        if (n === 0) return 0;
+        return n + addUp(n - 1);
+      }
+      function minMaxLengthAverage(arr) {
+        if (arr.length === 0) return "Array is empty";
+        let min = Math.min(...arr);
+        let max = Math.max(...arr);
+        let length = arr.length;
+        let average = arr.reduce((sum, num) => sum + num, 0) / length;
+        return [min, max, length, average];
+      }
+
+      function countWords(str) {
+        return str.trim().split(/\s+/).length;
+      }
+
+      function MultiplyByLength(arr) {
+        return arr.map((num) => num * arr.length);
+      }
+      function checkEnding(str1, str2) {
+        return str1.endsWith(str2);
+      }
+      function findIndex(arr, element) {
+        return arr.indexOf(element);
+      }
+      function doubleChar(str) {
+        return str
+          .split("")
+          .map((char) => char + char)
+          .join("");
+      }
+    </script>
+  </body>
+</html>

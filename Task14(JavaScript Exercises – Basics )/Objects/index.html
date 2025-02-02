@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript Objects</h2>
+    <h3>Please check the console Ctrl+Shift+I</h3>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+      "
+    ></div>
+    <script type="text/javascript">
+      function getObjectKeys(obj) {
+        return Object.keys(obj);
+      }
+      console.log("Question 1:-\n");
+      console.log(
+        "getObjectKeys({ name: 'Adam', age: 25, gender: 'male' }) :-",
+        getObjectKeys({ name: "Adam", age: 25, gender: "male" })
+      );
+
+      function getObjectPropertyCount(obj) {
+        return Object.keys(obj).length;
+      }
+      console.log("Question 2:-\n");
+      console.log(
+        "getObjectPropertyCount({ name: 'Adam', age: 25, gender: 'male' }) :-",
+        getObjectPropertyCount({ name: "Adam", age: 25, gender: "male" })
+      );
+
+      function mergeObjects(obj1, obj2) {
+        return Object.assign({}, obj1, obj2);
+      }
+      console.log("Question 3:-\n");
+      console.log(
+        "mergeObjects({ name: 'Adam', age: 25 }, { gender: 'male' }) :-",
+        mergeObjects({ name: "Adam", age: 25 }, { gender: "male" })
+      );
+
+      function convertPropertiesToUpperCase(obj) {
+        let newObj = {};
+        for (let key in obj) {
+          if (typeof obj[key] === "string") {
+            newObj[key] = obj[key].toUpperCase();
+          } else {
+            newObj[key] = obj[key];
+          }
+        }
+        return newObj;
+      }
+      console.log("Question 4:-\n");
+      console.log(
+        "convertPropertiesToUpperCase({ name: 'Adam', city: 'Amman' }) :-",
+        convertPropertiesToUpperCase({ name: "Adam", city: "Amman" })
+      );
+
+      function removeNullProperties(obj) {
+        let newObj = {};
+        for (let key in obj) {
+          if (obj[key] !== null) {
+            newObj[key] = obj[key];
+          }
+        }
+        return newObj;
+      }
+      console.log("Question 5:-\n");
+      console.log(
+        "removeNullProperties({ name: 'Adam', age: 25, city: 'Amman' }) :-",
+        removeNullProperties({ name: "Adam", age: 25, city: "Amman" })
+      );
+
+      function getSortedPropertyNames(obj) {
+        return Object.keys(obj).sort();
+      }
+      console.log("Question 6:-\n");
+      console.log(
+        "getSortedPropertyNames({ b: 2, a: 1, c: 3 }) :-",
+        getSortedPropertyNames({ b: 2, a: 1, c: 3 })
+      );
+    </script>
+  </body>
+</html>

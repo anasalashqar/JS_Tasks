@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 19</h1>
+    <h2>JavaScript Objects part 2</h2>
+    <h3>Please check the console Ctrl+Shift+I</h3>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+      "
+    ></div>
+    <script type="text/javascript">
+      const person = { name: "Adam", age: 25, gender: "male" };
+      const keys = Object.keys(person);
+
+      console.log("Question1:-\n");
+      console.log("Object.keys({ name: 'Adam', age: 25, gender: 'male' })");
+      console.log("Output:", keys);
+
+      const values = Object.values(person);
+
+      console.log("Question2:-\n");
+      console.log("Object.values({ name: 'Adam', age: 25, gender: 'male' })");
+      console.log("Output:", values);
+
+      const entries = Object.entries(person);
+
+      console.log("Question3:-\n");
+      console.log("Object.entries({ name: 'Adam', age: 25, gender: 'male' })");
+      console.log("Output:", entries);
+
+      const obj1 = { name: "Adam", age: 25 };
+      const obj2 = { gender: "male" };
+      const mergedObj = Object.assign({}, obj1, obj2);
+
+      console.log("Question4:-\n");
+      console.log(
+        "Object.assign({}, { name: 'Adam', age: 25 }, { gender: 'male' })"
+      );
+      console.log("Output:", mergedObj);
+
+      const frozenObj = { name: "Adam", age: 25 };
+      Object.freeze(frozenObj);
+
+      console.log("Question5:-\n");
+      console.log("Object.freeze({ name: 'Adam', age: 25 })");
+      console.log("Output:", frozenObj);
+
+      const sealedObj = { name: "Adam", age: 25 };
+      Object.seal(sealedObj);
+      sealedObj.age = 30; // Allowed
+      sealedObj.gender = "male"; // Not allowed
+
+      console.log("Question6:-\n");
+      console.log("Object.seal({ name: 'Adam', age: 25 })");
+      console.log("Modified age (allowed):", sealedObj);
+    </script>
+  </body>
+</html>
