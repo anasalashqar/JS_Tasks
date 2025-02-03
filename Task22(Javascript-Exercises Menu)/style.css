@@ -1,0 +1,11 @@
+img {
+  width: 200px;
+  height: 100px;
+}
+th {
+  border: 2px solid tomato;
+}
+
+td {
+  border: 2px solid tomato;
+}

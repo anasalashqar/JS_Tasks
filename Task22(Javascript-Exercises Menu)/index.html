@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form action="" id="menu_form">
+      <fieldset>
+        <legend>your menu</legend>
+        <label for="" name="cus_name"></label>
+        <input type="text" name="cus_name" id="name_cu" />
+        <label for="" name="desh_sel"></label>
+        <select name="type_de" id="selection_op">
+          <option value="dessert">dessert</option>
+          <option value="main_co">main_co</option>
+          <option value="appetizer">appetizer</option>
+        </select>
+        <button type="submit">Submit your order</button>
+      </fieldset>
+    </form>
+
+    <table id="menu_table">
+      <thead>
+        <tr>
+          <th>order image</th>
+          <th>customer name</th>
+          <th>food type</th>
+          <th>payment</th>
+        </tr>
+      </thead>
+      <tbody id="body_con">
+        <!-- td/tr -->
+      </tbody>
+    </table>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

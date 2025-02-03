@@ -13,10 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("form1").addEventListener("submit", (event) => {
   event.preventDefault();
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+
   const passwordConfirm = document.getElementById("confirmPassword").value;
   const emailConfirm = document.getElementById("confirmEmail").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
   const name = document.getElementById("name").value;
 
   if (password.length < 8) {
