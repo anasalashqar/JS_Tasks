@@ -1,5 +1,4 @@
 "use strict";
-
 let menu_form = document.getElementById("menu_form");
 
 let table_body_con = document.getElementById("body_con");
@@ -21,7 +20,7 @@ function form_data(event) {
   // console.log("inside data form",event);
   let customer_name = event.target.cus_name.value; //input
   let order_customer = event.target.type_de.value; //drop down list
-  let price = Math.random() * 10;
+  let price = (Math.random() * 10).toFixed(2);
   // console.log(customer_name,"customer_name");
   // console.log(order_cus,"order_cus");
   // if condition for image // order
@@ -29,15 +28,12 @@ function form_data(event) {
     customer_name,
     order_customer,
     price,
-    img: `../images/${order_customer}.jpg`,
+    img: `./images/${order_customer}.jpg`,
   });
   localStorage.setItem("app", JSON.stringify(customer_arr));
   render_table();
 }
 
-function price_order(min, max) {
-  return Math.random() * (max - min) + min;
-}
 // console.log(this,"= data this out function")
 
 function render_table() {
