@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const one = document.getElementById("one");
   const two = document.getElementById("two");
@@ -8,18 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1 is for register
   if (1 == r) {
     if (emailAndPassword) {
-      document.getElementById("LoginOrSignup").innerHTML = "Logout";
       one.style.display = "none";
       two.style.display = "flex";
     } else {
-      document.getElementById("LoginOrSignup").innerHTML = "Login";
       one.style.display = "flex";
       two.style.display = "none";
     }
   } else {
-    if (emailAndPassword) {
-      document.getElementById("LoginOrSignup").innerHTML = "Logout";
-    }
     one.style.display = "none";
     two.style.display = "flex";
   }
