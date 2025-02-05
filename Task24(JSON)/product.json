@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 1200,
+    "category": "Electronics",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_YbPRVEa5BqJR-6y2KIiSrPcHyxHbkIW4TQ&s"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "price": 800,
+    "category": "Electronics",
+    "image": "https://cdn.thewirecutter.com/wp-content/media/2024/05/smartphone-2048px-1013.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Headphones",
+    "price": 150,
+    "category": "Accessories",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2S_h4ZBhUdlNIHDVl4DX_wHbhezep29d1mg&s"
+  },
+  {
+    "id": 4,
+    "name": "Backpack",
+    "price": 50,
+    "category": "Bags",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKdMm1EShTe-Kxm_WvdhvHeA0g-c0iaR4-4A&s"
+  }
+]
